@@ -24,7 +24,7 @@ class MyHome extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Ini Title"),
+        title: Text("Den-Liner"),
         backgroundColor: Colors.blue,
         actions: [
           Icon(Icons.person, color: Colors.white),
@@ -33,6 +33,16 @@ class MyHome extends StatelessWidget {
           Icon(Icons.ac_unit),
           SizedBox(width: 20),
         ],
+      ),
+      body: Container(
+        alignment: Alignment.center,
+        margin: EdgeInsets.only(top: 20),
+
+        decoration: BoxDecoration(
+          color: Colors.yellow,
+          borderRadius: BorderRadius.circular(10.0),
+        ),
+        child: Text("Ini adalah teks di dalam container"),
       ),
     );
   }
