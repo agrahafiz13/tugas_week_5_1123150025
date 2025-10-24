@@ -2,4 +2,4 @@
 
 Todo :
 1. Pertama setelah di hapus buat function main didalam statement runApp()
-2.
+2. Buat Stateless dengan name MyApp
