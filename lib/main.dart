@@ -23,7 +23,17 @@ class MyHome extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Ini Title"), backgroundColor: Colors.blue),
+      appBar: AppBar(
+        title: Text("Ini Title"),
+        backgroundColor: Colors.blue,
+        actions: [
+          Icon(Icons.person, color: Colors.white),
+          SizedBox(width: 10),
+          Icon(Icons.account_tree),
+          Icon(Icons.ac_unit),
+          SizedBox(width: 20),
+        ],
+      ),
     );
   }
 }
