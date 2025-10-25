@@ -24,7 +24,7 @@ class MyHome extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Den-Liner"),
+        title: Text("RIDER TIME"),
         backgroundColor: Colors.blue,
         actions: [
           Icon(Icons.person, color: Colors.white),
@@ -45,15 +45,15 @@ class MyHome extends StatelessWidget {
             margin: EdgeInsets.all(15),
             padding: EdgeInsets.all(20),
             decoration: BoxDecoration(
-              gradient: LinearGradient(
-                colors: [
-                  Color.fromARGB(255, 0, 195, 255), // biru muda
-                  Color.fromARGB(255, 255, 238, 0), // kuning
-                ],
-                begin: Alignment.topRight,
-                end: Alignment.bottomLeft,
+              image: DecorationImage(
+                image: AssetImage("assets/images/zio.png"),
+                fit: BoxFit.cover,
               ),
               borderRadius: BorderRadius.circular(12),
+              border: Border.all(
+                color: Colors.black, // warna pinggiran
+                width: 2, // ketebalan garis pinggiran
+              ),
             ),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -105,6 +105,10 @@ class MyHome extends StatelessWidget {
                   end: Alignment.bottomLeft,
                 ),
                 borderRadius: BorderRadius.circular(12),
+                border: Border.all(
+                  color: Colors.black, // warna pinggiran
+                  width: 2, // ketebalan garis pinggiran
+                ),
               ),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -157,6 +161,10 @@ class MyHome extends StatelessWidget {
                   end: Alignment.bottomLeft,
                 ),
                 borderRadius: BorderRadius.circular(12),
+                border: Border.all(
+                  color: Colors.black, // warna pinggiran
+                  width: 2, // ketebalan garis pinggiran
+                ),
               ),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
