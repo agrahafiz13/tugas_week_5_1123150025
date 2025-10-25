@@ -148,12 +148,12 @@ class MyHome extends StatelessWidget {
                   image: AssetImage("assets/images/legend.png"),
                   fit: BoxFit.cover,
                   colorFilter: ColorFilter.mode(
-                    Colors.black.withOpacity(0.1), // warna overlay
-                    BlendMode.darken, // cara penggabungan warna dan gambar
+                    Colors.black.withOpacity(0.1),
+                    BlendMode.darken,
                   ),
                 ),
                 gradient: LinearGradient(
-                  // ✅ tetap bisa pakai gradient
+                  //
                   colors: [Colors.yellow, Colors.greenAccent, Colors.blue],
                   begin: Alignment.bottomLeft,
                   end: Alignment.topRight,
