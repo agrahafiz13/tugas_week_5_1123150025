@@ -50,10 +50,7 @@ class MyHome extends StatelessWidget {
                 fit: BoxFit.cover,
               ),
               borderRadius: BorderRadius.circular(12),
-              border: Border.all(
-                color: Colors.black, // warna pinggiran
-                width: 2, // ketebalan garis pinggiran
-              ),
+              border: Border.all(color: Colors.black, width: 2),
             ),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -96,19 +93,12 @@ class MyHome extends StatelessWidget {
               margin: EdgeInsets.all(15),
               padding: EdgeInsets.all(20),
               decoration: BoxDecoration(
-                gradient: LinearGradient(
-                  colors: [
-                    Color.fromARGB(255, 0, 195, 255),
-                    Color.fromARGB(255, 255, 238, 0),
-                  ],
-                  begin: Alignment.topRight,
-                  end: Alignment.bottomLeft,
+                image: DecorationImage(
+                  image: AssetImage("assets/images/decade.png"),
+                  fit: BoxFit.cover,
                 ),
                 borderRadius: BorderRadius.circular(12),
-                border: Border.all(
-                  color: Colors.black, // warna pinggiran
-                  width: 2, // ketebalan garis pinggiran
-                ),
+                border: Border.all(color: Colors.black, width: 2),
               ),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -152,18 +142,21 @@ class MyHome extends StatelessWidget {
               margin: EdgeInsets.all(15),
               padding: EdgeInsets.all(20),
               decoration: BoxDecoration(
-                gradient: LinearGradient(
-                  colors: [
-                    Color.fromARGB(255, 0, 195, 255),
-                    Color.fromARGB(255, 255, 238, 0),
-                  ],
-                  begin: Alignment.topRight,
-                  end: Alignment.bottomLeft,
-                ),
                 borderRadius: BorderRadius.circular(12),
-                border: Border.all(
-                  color: Colors.black, // warna pinggiran
-                  width: 2, // ketebalan garis pinggiran
+                border: Border.all(color: Colors.blueAccent, width: 3),
+                image: DecorationImage(
+                  image: AssetImage("assets/images/legend.png"),
+                  fit: BoxFit.cover,
+                  colorFilter: ColorFilter.mode(
+                    Colors.black.withOpacity(0.1), // warna overlay
+                    BlendMode.darken, // cara penggabungan warna dan gambar
+                  ),
+                ),
+                gradient: LinearGradient(
+                  // ✅ tetap bisa pakai gradient
+                  colors: [Colors.yellow, Colors.greenAccent, Colors.blue],
+                  begin: Alignment.bottomLeft,
+                  end: Alignment.topRight,
                 ),
               ),
               child: Column(
