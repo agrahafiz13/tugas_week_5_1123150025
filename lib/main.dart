@@ -36,6 +36,7 @@ class MyHome extends StatelessWidget {
         ],
       ),
       body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Container(
             width: 150,
@@ -86,29 +87,106 @@ class MyHome extends StatelessWidget {
             ),
           ),
 
-          Container(
-            width: 150,
-            height: 150,
-            alignment: Alignment.center,
-            margin: EdgeInsets.all(15),
-            decoration: BoxDecoration(
-              color: Colors.lightBlueAccent,
-              gradient: const LinearGradient(
-                colors: [
-                  Color(0xFF00B4DB), // biru muda
-                  Color(0xFFFFE000), // kuning cerah
+          Transform.rotate(
+            angle: 5 * 3.14159 / 180,
+            child: Container(
+              width: 150,
+              height: 150,
+              alignment: Alignment.centerLeft,
+              margin: EdgeInsets.all(15),
+              padding: EdgeInsets.all(20),
+              decoration: BoxDecoration(
+                gradient: LinearGradient(
+                  colors: [
+                    Color.fromARGB(255, 0, 195, 255),
+                    Color.fromARGB(255, 255, 238, 0),
+                  ],
+                  begin: Alignment.topRight,
+                  end: Alignment.bottomLeft,
+                ),
+                borderRadius: BorderRadius.circular(12),
+              ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    "Kamen",
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  Text(
+                    "Rider",
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  Text(
+                    "Decade",
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
                 ],
-                begin: Alignment.topRight,
-                end: Alignment.bottomLeft,
               ),
             ),
+          ),
 
-            child: Text(
-              "Hello World..!!",
-              style: TextStyle(
-                fontSize: 20,
-                fontWeight: FontWeight.bold,
-                color: Colors.white,
+          Transform.rotate(
+            angle: -5 * 3.14159 / 180,
+            child: Container(
+              width: 150,
+              height: 150,
+              alignment: Alignment.centerLeft,
+              margin: EdgeInsets.all(15),
+              padding: EdgeInsets.all(20),
+              decoration: BoxDecoration(
+                gradient: LinearGradient(
+                  colors: [
+                    Color.fromARGB(255, 0, 195, 255),
+                    Color.fromARGB(255, 255, 238, 0),
+                  ],
+                  begin: Alignment.topRight,
+                  end: Alignment.bottomLeft,
+                ),
+                borderRadius: BorderRadius.circular(12),
+              ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    "Kamen",
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  Text(
+                    "Rider",
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  Text(
+                    "Legend",
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ],
               ),
             ),
           ),
